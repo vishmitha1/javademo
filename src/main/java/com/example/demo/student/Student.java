@@ -3,49 +3,28 @@ package com.example.demo.student;
 import java.time.LocalDate;
 
 public class Student {
-    private String email;
-    private Integer age;
-    private String name;
     private Long id;
+    private String name;
+    private String email;
     private LocalDate dob;
+    private Integer age;
 
-    public Student(String email, Integer age, String name, Long id, LocalDate dob) {
-        this.email = email;
-        this.age = age;
-        this.name = name;
+    public Student() {
+    }
+
+    public Student(Long id, String name, String email, LocalDate dob, Integer age) {
         this.id = id;
-        this.dob = dob;
-    }
-
-    public Student(Integer age, String name, Long id, LocalDate dob) {
-        this.age = age;
         this.name = name;
-        this.id = id;
-        this.dob = dob;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
         this.email = email;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
+        this.dob = dob;
         this.age = age;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
+    public Student(String name, String email, LocalDate dob, Integer age) {
         this.name = name;
+        this.email = email;
+        this.dob = dob;
+        this.age = age;
     }
 
     public Long getId() {
@@ -56,6 +35,22 @@ public class Student {
         this.id = id;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public LocalDate getDob() {
         return dob;
     }
@@ -64,14 +59,22 @@ public class Student {
         this.dob = dob;
     }
 
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
-                "email='" + email + '\'' +
-                ", age=" + age +
+                "id=" + id +
                 ", name='" + name + '\'' +
-                ", id=" + id +
+                ", email='" + email + '\'' +
                 ", dob=" + dob +
+                ", age=" + age +
                 '}';
     }
 }
